@@ -124,7 +124,7 @@ public class MainActivity extends Activity {
 
         root.addView(secondRow);
 
-        // this is the second row
+        // this is the third row
         LinearLayout thirdRow = new LinearLayout(this);
         thirdRow.setOrientation(LinearLayout.HORIZONTAL);
         row_spec = GridLayout.spec(2);
