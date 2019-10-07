@@ -16,6 +16,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // background colors that will be used later
         int blue = Color.parseColor("#D4FCFE");
         int yellow = Color.parseColor("#FDFF9C");
         int orange = Color.parseColor("#FFCB94");
@@ -28,6 +29,8 @@ public class MainActivity extends Activity {
         );
         scroller.setLayoutParams(hsvParams);
 
+        // the entire table is in GridLayout, but each row of the table
+        // will be formatted using LinearLayout
         GridLayout root = new GridLayout(this);
         ViewGroup.LayoutParams rParams = new ViewGroup.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
@@ -35,9 +38,10 @@ public class MainActivity extends Activity {
         );
         root.setLayoutParams(rParams);
         root.setOrientation(GridLayout.VERTICAL);
-        root.setColumnCount(4);
+        root.setColumnCount(1);
         root.setRowCount(10);
 
+        // each row is formatted using LinearLayout that is horizontal
         LinearLayout firstRow = new LinearLayout(this);
         firstRow.setOrientation(LinearLayout.HORIZONTAL);
         GridLayout.Spec row_spec = GridLayout.spec(0);
@@ -55,6 +59,7 @@ public class MainActivity extends Activity {
         firstRow.addView(tv);
         root.addView(firstRow);
 
+        // this is the second row
         LinearLayout secondRow = new LinearLayout(this);
         secondRow.setOrientation(LinearLayout.HORIZONTAL);
         row_spec = GridLayout.spec(1);
@@ -71,6 +76,8 @@ public class MainActivity extends Activity {
         tv.setBackgroundColor(Color.WHITE);
         secondRow.addView(tv);
 
+        // the second row's second column is formatted using LinearLayout again...
+        // ...but it is vertical
         LinearLayout secondRowSecondColumn = new LinearLayout(this);
         secondRowSecondColumn.setOrientation(LinearLayout.VERTICAL);
 
@@ -92,6 +99,8 @@ public class MainActivity extends Activity {
 
         secondRow.addView(secondRowSecondColumn);
 
+        // the second row's second column is formatted using LinearLayout again...
+        // ...but it is vertical as well
         LinearLayout secondRowThirdColumn = new LinearLayout(this);
         secondRowThirdColumn.setOrientation(LinearLayout.VERTICAL);
 
@@ -115,6 +124,7 @@ public class MainActivity extends Activity {
 
         root.addView(secondRow);
 
+        // this is the second row
         LinearLayout thirdRow = new LinearLayout(this);
         thirdRow.setOrientation(LinearLayout.HORIZONTAL);
         row_spec = GridLayout.spec(2);
@@ -151,6 +161,7 @@ public class MainActivity extends Activity {
 
         root.addView(thirdRow);
 
+        // this is the fourth row
         LinearLayout fourthRow = new LinearLayout(this);
         fourthRow.setOrientation(LinearLayout.HORIZONTAL);
         row_spec = GridLayout.spec(3);
@@ -183,6 +194,7 @@ public class MainActivity extends Activity {
 
         root.addView(fourthRow);
 
+        // this is the fifth row
         LinearLayout fifthRow = new LinearLayout(this);
         fifthRow.setOrientation(LinearLayout.HORIZONTAL);
         row_spec = GridLayout.spec(4);
@@ -224,6 +236,7 @@ public class MainActivity extends Activity {
 
         root.addView(fifthRow);
 
+        // this is the sixth row
         LinearLayout sixthRow = new LinearLayout(this);
         sixthRow.setOrientation(LinearLayout.HORIZONTAL);
         row_spec = GridLayout.spec(5);
@@ -269,6 +282,7 @@ public class MainActivity extends Activity {
 
         root.addView(sixthRow);
 
+        // this is the seventh row
         LinearLayout seventhRow = new LinearLayout(this);
         seventhRow.setOrientation(LinearLayout.HORIZONTAL);
         row_spec = GridLayout.spec(6);
@@ -310,6 +324,7 @@ public class MainActivity extends Activity {
 
         root.addView(seventhRow);
 
+        // this is the eighth row
         LinearLayout eighthRow = new LinearLayout(this);
         eighthRow.setOrientation(LinearLayout.HORIZONTAL);
         row_spec = GridLayout.spec(7);
@@ -351,6 +366,7 @@ public class MainActivity extends Activity {
 
         root.addView(eighthRow);
 
+        // this is the ninth row
         LinearLayout ninthRow = new LinearLayout(this);
         ninthRow.setOrientation(LinearLayout.HORIZONTAL);
         row_spec = GridLayout.spec(8);
@@ -392,6 +408,7 @@ public class MainActivity extends Activity {
 
         root.addView(ninthRow);
 
+        // this is the tenth row
         LinearLayout tenthRow = new LinearLayout(this);
         tenthRow.setOrientation(LinearLayout.HORIZONTAL);
         row_spec = GridLayout.spec(9);
